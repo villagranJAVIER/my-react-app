@@ -1,0 +1,39 @@
+@layer components {
+    .table-container {
+        @apply w-full overflow-hidden rounded-2xl border border-gray-100 bg-white/70 backdrop-blur-xl transition-all duration-300;
+    }
+
+    .modern-table {
+        @apply w-full text-left border-collapse whitespace-nowrap;
+    }
+
+    .modern-table thead {
+        @apply bg-gradient-to-r from-slate-50 to-indigo-50/80 text-slate-900 uppercase text-xs font-bold tracking-widest border-b border-indigo-100;
+    }
+
+    .modern-table th {
+        @apply px-6 py-4;
+    }
+
+    .modern-table tbody {
+        @apply divide-y divide-gray-100 text-sm text-gray-600 bg-white;
+    }
+
+    .modern-table tbody tr {
+        @apply transition-all duration-200 hover:bg-blue-50/50 relative;
+    }
+
+    /* Pequeño efecto visual al pasar el mouse */
+    .modern-table tbody tr::after {
+        content: '';
+        @apply absolute left-0 top-0 bottom-0 w-1 bg-transparent transition-colors duration-200;
+    }
+    
+    .modern-table tbody tr:hover::after {
+        @apply bg-blue-500;
+    }
+
+    .modern-table td {
+        @apply px-6 py-4 font-medium;
+    }
+}
